@@ -14,7 +14,7 @@ def browser(request):
 
     # Инициализация драйвера
     
-    driver = webdriver.Chrome( options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
 
     yield driver  # Передаем драйвер в тест
     driver.quit()  # Закрытие драйвера после теста
