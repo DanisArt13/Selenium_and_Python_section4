@@ -1,7 +1,7 @@
 """ test_product_page """
 from .pages.product_page import PageObject
 import pytest
-
+ 
 links = ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
           "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
           "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer2",
