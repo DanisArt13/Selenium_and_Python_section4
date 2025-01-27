@@ -46,12 +46,7 @@ class BasePage():
             WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return True
-        return False
-        
-    def none_items_message(self):
-        actual_message = self.browser.find_element(*BasketPageLocators.NONE_PRODUCTS_MESSAGE).text
-        expected_message = "Your basket is empty"
-        assert expected_message in actual_message, f'Incorrect message, must be "{expected_message}"'
+        return False        
         
     def open(self):
         self.browser.get(self.url)
@@ -77,8 +72,7 @@ class BasePage():
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
         
-    def should_not_be_products_in_basket(self):
-        assert self.is_element_present(*BasketPageLocators.ITEMS_LINK), "Products in the basket, but shouldn't be there"
+    
         
 
         
