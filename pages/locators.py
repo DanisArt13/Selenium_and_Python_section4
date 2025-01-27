@@ -10,11 +10,13 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     # LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    BASKET_LINK = (By.CSS_SELECTOR, ".btn-group a.btn")
     
 class BasketPageLocators():
-    ITEMS_LINK = (By.CSS_SELECTOR, "div.basket-items")
+    ITEMS_LINK = (By.CSS_SELECTOR, "#content_inner .basket_items")
     NONE_PRODUCTS_MESSAGE = (By.CSS_SELECTOR, "#content_inner p")
-
+    
+    
 class HomePageLocators():
     HOME_PAGE_LINK = (By.CSS_SELECTOR ,".col-sm-7 a")
 

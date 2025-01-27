@@ -12,6 +12,5 @@ class BasketPage(BasePage):
         expected_message = "Your basket is empty"
         assert expected_message in actual_message, f'Incorrect message, must be "{expected_message}"'
         
-    @pytest.mark.xfail
     def should_not_be_products_in_basket(self):
-        assert self.is_element_present(*BasketPageLocators.ITEMS_LINK), "Products in the basket, but shouldn't be there"
+        assert self.is_not_element_present(*BasketPageLocators.ITEMS_LINK), "Products in the basket, but shouldn't be there"
